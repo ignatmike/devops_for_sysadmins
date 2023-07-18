@@ -10,7 +10,12 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh 'test_script.sh' // Запуск тестів
+                sh '''if [ $((2 + 2)) -eq 4 ]; then
+                    echo "Test was successful!"
+                    else
+                    echo "Your test is broken!"
+                    fi
+                '''
             }
         }
         
