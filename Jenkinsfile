@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                     #!/bin/bash
-                    if [ $((2 + 2)) -eq 4 ]; then
+                    if [ $((2 + 2)) -eq 5 ]; then
                     echo "Test was successful!"
                     else
                     echo "Your test is broken!"
