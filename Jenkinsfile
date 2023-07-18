@@ -10,7 +10,9 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh '''if [ $((2 + 2)) -eq 4 ]; then
+                sh '''
+                    #!/bin/bash
+                    if [ $((2 + 2)) -eq 4 ]; then
                     echo "Test was successful!"
                     else
                     echo "Your test is broken!"
