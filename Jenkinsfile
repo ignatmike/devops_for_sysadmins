@@ -4,21 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install' // Встановлення залежностей
-                sh 'npm run build' // Збірка проекту
                 echo '“Hello DevOps for Sysadmins students!'
             }
         }
         
         stage('Test') {
             steps {
-                sh 'npm test' // Запуск тестів
+                sh './test_script.sh' // Запуск тестів
             }
         }
         
         stage('Deploy') {
             steps {
-                sh 'npm run deploy' // Розгортання проекту
+                echo 'Deploying'
+            //    sh 'npm run deploy' // Розгортання проекту
             }
         }
     }
