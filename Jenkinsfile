@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    environment {
+        DEPLOY_TO = 'true'
+    }
+    
     stages {
         stage('Build') {
             steps {
@@ -23,6 +27,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
+                echo "DEPLOY_TO is ${DEPLOY_TO}"
                 echo 'Deploying'
             //    sh 'npm run deploy' // Розгортання проекту
             }
