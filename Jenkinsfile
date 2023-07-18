@@ -10,7 +10,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh './test_script.sh' // Запуск тестів
+                sh 'test_script.sh' // Запуск тестів
             }
         }
         
